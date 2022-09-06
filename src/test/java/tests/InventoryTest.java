@@ -21,4 +21,33 @@ public class InventoryTest extends BaseTest {
 
         assertTrue(inventoryPage.elementAllItems());
     }
+
+    @Test
+    public void openSideMenuAndClickButtonLogout(){
+        loginPage.open()
+                .inputLogin("standard_user")
+                .inputPassword("secret_sauce")
+                .clickLoginButton();
+        inventoryPage.clickButtonSideMenu()
+                .waitLoader()
+                .clickLogout();
+
+        assertTrue(loginPage.buttonLogout());
+    }
+
+
+//    @Test
+//    public void productFilteringAlphabetically(){
+//        loginPage.open()
+//                .inputLogin("standard_user")
+//                .inputPassword("secret_sauce")
+//                .clickLoginButton();
+//        inventoryPage.clickButtonProductSort()
+//                .waitLoader()
+//                .clickSortAlphabetically();
+//
+//        assertTrue(inventoryPage.firstProductAlphabetically() && inventoryPage.lastProductAlphabetically());
+//
+//    }
+
 }

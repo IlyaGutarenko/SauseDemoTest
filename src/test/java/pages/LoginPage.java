@@ -39,6 +39,9 @@ public class LoginPage extends BasePage {
         return driver.findElement(ERROR_MESSAGE).getText();
     }
 
+    public boolean buttonLogout(){
+        return driver.findElement(LOGIN_BUTTON).isDisplayed();
+    }
 
 
 
