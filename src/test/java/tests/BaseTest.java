@@ -7,6 +7,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
+
+import pages.CartPage;
 import pages.InventoryPage;
 import pages.LoginPage;
 
@@ -19,6 +22,7 @@ public class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
     InventoryPage inventoryPage;
+    CartPage cartPage;
 
     @BeforeTest
     public void setUp() {
@@ -30,6 +34,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);
         inventoryPage = new InventoryPage(driver);
+        cartPage = new CartPage(driver);
     }
 
 

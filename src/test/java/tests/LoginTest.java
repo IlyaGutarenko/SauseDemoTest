@@ -17,7 +17,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void emptyLoginAndPassField() {
+    public void inputLoginAndPassField() {
         loginPage.open()
                 .clickLoginButton();
 
