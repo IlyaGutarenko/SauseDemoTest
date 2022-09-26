@@ -12,7 +12,6 @@ public class CartPage extends BasePage {
     public static final By PRODUCT_2_IN_CART = By.xpath("//div[text()='Sauce Labs Bike Light']");
 
 
-
     public boolean Product1InCart() {
         return driver.findElement(PRODUCT_1_IN_CART).isDisplayed();
     }

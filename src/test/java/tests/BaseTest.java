@@ -9,6 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 
+import pages.BuyPage;
 import pages.CartPage;
 import pages.InventoryPage;
 import pages.LoginPage;
@@ -23,6 +24,7 @@ public class BaseTest {
     LoginPage loginPage;
     InventoryPage inventoryPage;
     CartPage cartPage;
+    BuyPage buyPage;
 
     @BeforeTest
     public void setUp() {
@@ -35,6 +37,7 @@ public class BaseTest {
         loginPage = new LoginPage(driver);
         inventoryPage = new InventoryPage(driver);
         cartPage = new CartPage(driver);
+        buyPage = new BuyPage(driver);
     }
 
 
