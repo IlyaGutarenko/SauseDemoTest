@@ -39,6 +39,7 @@ public class BuyPage extends BasePage {
     public BuyPage inputZipCode(String zipCode) {
         driver.findElement(ZIP_POSTAL_CODE).sendKeys(zipCode);
         return this;
+
     }
 
     public BuyPage clickButtonContinue() {
