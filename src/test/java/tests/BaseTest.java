@@ -41,10 +41,10 @@ public class BaseTest {
     }
 
 
-//    @AfterTest(alwaysRun = true)
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterTest(alwaysRun = true)
+    public void tearDown() {
+        driver.quit();
+    }
 
     public void waitForPageLoaded() {
         new ExpectedCondition<Boolean>() {
