@@ -39,6 +39,7 @@ public class BaseTest {
         cartPage = new CartPage(driver);
         buyPage = new BuyPage(driver);
 
+        
     }
 
 
