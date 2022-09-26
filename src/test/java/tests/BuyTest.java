@@ -23,6 +23,5 @@ public class BuyTest extends BaseTest {
                 .clickButtonFinish();
         assertEquals(buyPage.textIsComplete(), "THANK YOU FOR YOUR ORDER");
 
-
     }
 }
