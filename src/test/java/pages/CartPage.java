@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class CartPage extends BasePage {
     public CartPage(WebDriver driver) {
         super(driver);
+
     }
 
     public static final By PRODUCT_1_IN_CART = By.xpath("//div[text()='Sauce Labs Backpack']");

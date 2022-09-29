@@ -41,7 +41,6 @@ public class CartTest extends BaseTest {
         inventoryPage.clickAddToCartBackpack();
 
         assertEquals(inventoryPage.cartIconNumber(), "1");
-
     }
 
     @Test
