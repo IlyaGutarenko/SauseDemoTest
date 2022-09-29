@@ -23,6 +23,7 @@ public class BuyPage extends BasePage {
     public BuyPage clickButtonCheckout() {
         driver.findElement(CHECKOUT_BUTTON).click();
         return this;
+
     }
 
 
