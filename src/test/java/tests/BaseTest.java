@@ -9,10 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 
-import pages.BuyPage;
-import pages.CartPage;
-import pages.InventoryPage;
-import pages.LoginPage;
+import pages.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -25,6 +22,7 @@ public class BaseTest {
     InventoryPage inventoryPage;
     CartPage cartPage;
     BuyPage buyPage;
+    PriceMatchingPage priceMatchingPage;
 
     @BeforeTest
     public void setUp() {
@@ -38,7 +36,7 @@ public class BaseTest {
         inventoryPage = new InventoryPage(driver);
         cartPage = new CartPage(driver);
         buyPage = new BuyPage(driver);
-
+        priceMatchingPage = new PriceMatchingPage(driver);
     }
 
 
