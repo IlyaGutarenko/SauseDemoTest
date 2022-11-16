@@ -10,6 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 
+import org.testng.annotations.Parameters;
 import pages.*;
 
 import java.util.concurrent.TimeUnit;
