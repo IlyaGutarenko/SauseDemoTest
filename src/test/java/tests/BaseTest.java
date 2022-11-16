@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -25,13 +26,14 @@ public class BaseTest {
     PriceMatchingPage priceMatchingPage;
 
     @BeforeTest
-    public void setUp() {
+    public void setUp(ITestContext context) {
         chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        context.setAttribute("driver", driver);
         loginPage = new LoginPage(driver);
         inventoryPage = new InventoryPage(driver);
         cartPage = new CartPage(driver);
@@ -45,14 +47,14 @@ public class BaseTest {
         driver.quit();
     }
 
-    public void waitForPageLoaded() {
-        new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete");
-
-            }
-        };
-    }
+//    public void waitForPageLoaded() {
+//        new ExpectedCondition<Boolean>() {
+//            public Boolean apply(WebDriver driver) {
+//                return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete");
+//
+//            }
+//        };
+//    }
 }
 
 

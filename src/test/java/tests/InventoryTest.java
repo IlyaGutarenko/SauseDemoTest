@@ -17,7 +17,7 @@ public class InventoryTest extends BaseTest {
                 .clickLoginButton();
         inventoryPage.clickButtonSideMenu();
         inventoryPage.waitLoader();
-        waitForPageLoaded();
+        //waitForPageLoaded();
 
         assertTrue(inventoryPage.elementAllItems());
     }
