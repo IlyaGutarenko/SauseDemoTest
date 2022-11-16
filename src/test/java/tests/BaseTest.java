@@ -10,13 +10,16 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import pages.*;
+import utils.Listener;
 
 import java.util.concurrent.TimeUnit;
 
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
+@Listeners(Listener.class)
 public class BaseTest {
 
     WebDriver driver;
